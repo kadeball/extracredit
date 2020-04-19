@@ -14,9 +14,8 @@ function CoolPerson(props){
     if(props.coolness ===true){
         styling = {
             fontSize: props.number,
-            fontFamily: "Courier New",
+            fontFamily: "arial",
             color:"pink",
-            border: "5px blue solid",
             margin: "25px"
         };
     }
