@@ -8,17 +8,19 @@ function CoolPerson(props){
 
     let styling = {
         fontSize: props.number,
+        margin: "25px"
     };
 
+        if(true === props.coolness){
+            styling = {
+                fontSize: props.number,
+                fontFamily: "times new roman",
+                color:"pink",
+                margin: "25px",
+            };
+        }
 
-    if(props.coolness ===true){
-        styling = {
-            fontSize: props.number,
-            fontFamily: "arial",
-            color:"pink",
-            margin: "25px"
-        };
-    }
+
 
     function returnText(name){
         if(name.length > 5){

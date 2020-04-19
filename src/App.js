@@ -14,9 +14,9 @@ function App() {
   const [objects, updateObjects] = React.useState([]);
 
   const [values, setValues] = React.useState({
-    coolness: '',
-    name:'',
-    number: ''
+    coolness: "",
+    name: "",
+    number: ""
   });
 
   let db = fyre.firestore();
@@ -31,7 +31,7 @@ function App() {
     }
 
 
-    const unsubscribe = db.collection("objects").get().then(function (snapshot) {
+    const obees = db.collection("objects").get().then(function (snapshot) {
       snapshot.forEach(function (doc) {
         let item = {
           coolness: doc.data().coolness,
@@ -46,7 +46,7 @@ function App() {
       handleStatusChange(newObjects);
     });
 
-    return () => unsubscribe;
+    return () => obees;
 
 
   }, []);
